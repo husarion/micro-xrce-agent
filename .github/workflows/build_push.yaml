@@ -37,7 +37,7 @@ jobs:
         platforms: linux/amd64 #, linux/arm64
         push: true
         build-args: |
-          MICRO_XRCE_DDS_AGENT_RELEASE=$MICRO_XRCE_DDS_AGENT_RELEASE
+          MICRO_XRCE_DDS_AGENT_RELEASE=${{ env.MICRO_XRCE_DDS_AGENT_RELEASE }}
         tags: |
           husarion/micro-xrce-agent
-          husarion/micro-xrce-agent:$MICRO_XRCE_DDS_AGENT_RELEASE
+          husarion/micro-xrce-agent:${{ env.MICRO_XRCE_DDS_AGENT_RELEASE }}

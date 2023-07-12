@@ -2,8 +2,9 @@ services:
   micro-xrce-agent:
     build:
       context: ..
-    ports:
-      - "8888:8888/udp"
+    # ports:
+    #   - "8888:8888/udp"
+    network_mode: host
     environment:
       - FASTRTPS_DEFAULT_PROFILES_FILE
       - XRCE_DOMAIN_ID_OVERRIDE=${ROS_DOMAIN_ID}
