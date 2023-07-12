@@ -28,9 +28,6 @@ RUN apt-get install -y gradle
 
 RUN apt-get clean
 
-# Prepare Micro XRCE-DDS Agent workspace
-# RUN git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git /agent
-# RUN mkdir -p /agent/build
 RUN curl -L https://github.com/eProsima/Micro-XRCE-DDS-Agent/archive/refs/tags/${MICRO_XRCE_DDS_AGENT_RELEASE}.tar.gz -o /MicroXRCEAgent.tar.gz && \
     tar -xzvf /MicroXRCEAgent.tar.gz && \
     mv /Micro-XRCE-DDS-Agent-* /agent && \
