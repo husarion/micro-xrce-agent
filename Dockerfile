@@ -50,6 +50,9 @@ RUN curl -L https://github.com/husarnet/husarnet-dds/releases/download/${HUSARNE
 # =======================
 FROM ubuntu:22.04
 
+ENV ROS_DOMAIN_ID=
+ENV XRCE_DOMAIN_ID_OVERRIDE=
+
 WORKDIR /root
 
 COPY --from=build /agent/install/ /usr/local/
